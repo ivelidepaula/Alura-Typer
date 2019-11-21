@@ -24,3 +24,11 @@ campo.one("focus", function() {
         }
     }, 1000);
 });
+
+$("#botao-reiniciar").click(function(){
+    campo.attr("disabled", false);
+    //inicializando os campos
+    campo.val("");
+    $("#contador-palavras").text("0");
+    $("#contador-caracteres").text("0");
+});
