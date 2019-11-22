@@ -67,3 +67,9 @@ function inicializaMarcadores() {
         }
     });
 }
+
+function inserePlacar(){
+    var corpoTabela = $(".placar").find("tbody");
+    var usuario = "Seu-nome";
+    var numPalavras = $("#contador-palavras").text();
+}
