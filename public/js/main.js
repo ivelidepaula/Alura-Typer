@@ -78,6 +78,7 @@ function inserePlacar() {
     var usuario = "Seu-nome";
     var numPalavras = $("#contador-palavras").text();
     var linha = novaLinha(usuario, numPalavras);
+    linha.find(".botao-remover").click(removeLinha);
 
     corpoTabela.append(linha);
 }
@@ -102,4 +103,9 @@ function novaLinha(usuario,palavras) {
     linha.append(colunaRemover);
 
     return linha;
+}
+
+function removeLinha(event) {
+    event.preventDefault();
+    $(this).parent().parent().remove();
 }
