@@ -29,7 +29,7 @@ function novaLinha(usuario, palavras) {
     return linha;
 }
 
-function removeLinha(event) {
+function removeLinha() {
     event.preventDefault();
     $(this).parent().parent().remove();
 }
