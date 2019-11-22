@@ -68,8 +68,23 @@ function inicializaMarcadores() {
     });
 }
 
-function inserePlacar(){
+function inserePlacar() {
     var corpoTabela = $(".placar").find("tbody");
     var usuario = "Seu-nome";
     var numPalavras = $("#contador-palavras").text();
+    var linha = novaLinha(usuario, numPalavras);
+
+    corpoTabela.append(linha);
+}
+
+function novaLinha(usuario, palavras) {
+    var linha = $("<tr>");
+    var colunaUsuario = $("<td>").text(usuario);
+    var colunaPalavras = $("<td>").text(palavras);
+
+    // Os dois <td> dentro do <tr>
+    linha.append(colunaUsuario);
+    linha.append(colunaPalavras);
+
+    return linha;
 }
