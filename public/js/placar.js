@@ -33,3 +33,9 @@ function removeLinha() {
     event.preventDefault();
     $(this).parent().parent().remove();
 }
+
+$("#botao-placar").click(mostraPlacar);
+
+function mostraPlacar() {
+    $(".placar").stop().slideToggle(600);
+}
