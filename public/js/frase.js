@@ -1,9 +1,14 @@
 $("#botao-frase").click(fraseAleatoria);
 
 function fraseAleatoria() {
+    $("#spinner").toggle();
+
     $.get("http://localhost:3000/frases", trocaFraseAleatoria) 
     .fail(function(){
         $("#erro").toggle(); //ao falhar mostra a mensagem de erro
+    })
+    .always(function(){ // novo, escondendo o spinner
+        $("#spinner").toggle();
     });
 }
 
